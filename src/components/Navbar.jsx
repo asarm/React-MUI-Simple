@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {AppBar, styled, Toolbar, Typography, Box, Badge, Avatar, Menu, MenuItem} from "@mui/material";
-import {Pets, Mail} from "@mui/icons-material";
+import {Mail, AddReaction} from "@mui/icons-material";
 
 const Icons = styled(Box)(({ theme }) => ({
     display: "flex", gap: "30px", alignItems: 'center'
@@ -15,7 +15,7 @@ const Navbar = () => {
                     display: 'flex', justifyContent: 'space-between'
                 }}>
                     <Typography sx={{display: {xs: 'none', sm: 'block'}}}> Navbar </Typography>
-                    <Pets sx={{display: {xs: 'block', sm: 'none'}}} />
+                    <AddReaction sx={{display: {xs: 'block', sm: 'none'}}} />
 
                     <Icons>
                         <Badge badgeContent={2} color="warning">
