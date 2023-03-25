@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import {Button, Stack, styled, Box} from "@mui/material";
+import {Settings, DeleteForever} from "@mui/icons-material";
+import SideBar from "./components/SideBar";
+import Feed from "./components/Feed";
+import RightBar from "./components/RightBar";
+import Navbar from "./components/Navbar";
 function App() {
+  const BlueButton = styled(Button)({
+    backgroundColor: 'skyblue', color: 'black', '&:hover':{
+      backgroundColor: 'grey'
+    }
+  })
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Box>
+        <Navbar />
+        <Stack direction='row' justifyContent='space-between' spacing={3}>
+          <SideBar />
+          <Feed />
+          <RightBar />
+        </Stack>
+      </Box>
     </div>
   );
 }
